@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca8d50c7-c58a-4af8-9dd0-055837709dfa" name="Changes" comment="Section 8/59 Brute Force Attack">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/listener/AuthenticationFailureListener.java" afterDir="false" />
+    <list default="true" id="ca8d50c7-c58a-4af8-9dd0-055837709dfa" name="Changes" comment="Section 8/61 Brute Force Attack">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/listener/AuthenticationFailureListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/listener/AuthenticationFailureListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/listener/AuthenticationSuccessListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/listener/AuthenticationSuccessListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/LoginAttemptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/LoginAttemptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/impl/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/impl/UserServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +108,7 @@
       <workItem from="1661328227100" duration="31676000" />
       <workItem from="1661519351949" duration="79000" />
       <workItem from="1661519445478" duration="7569000" />
-      <workItem from="1661756339760" duration="11718000" />
+      <workItem from="1661756339760" duration="14348000" />
     </task>
     <task id="LOCAL-00001" summary="Section 6 Done">
       <created>1661526849792</created>
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661779583222</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Section 8/61 Brute Force Attack">
+      <created>1661783859049</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661783859049</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Section 6 Done" />
     <MESSAGE value="Section 8/59 Brute Force Attack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Section 8/59 Brute Force Attack" />
+    <MESSAGE value="Section 8/61 Brute Force Attack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 8/61 Brute Force Attack" />
   </component>
 </project>

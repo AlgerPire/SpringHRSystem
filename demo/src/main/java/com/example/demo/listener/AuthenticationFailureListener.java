@@ -18,7 +18,7 @@ public class AuthenticationFailureListener {
     }
 
     @EventListener
-    public void onAuthentication(AuthenticationFailureBadCredentialsEvent event) throws ExecutionException {
+    public void onAuthentication(AuthenticationFailureBadCredentialsEvent event)  {
         Object principal=event.getAuthentication().getPrincipal();
         if(principal instanceof String){
             String username=(String) event.getAuthentication().getPrincipal();
