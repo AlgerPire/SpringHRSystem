@@ -2,8 +2,8 @@ package com.example.demo.constants;
 
 public class EmailConstant {
     public static final String SIMPLE_MAIL_TRANSFER_PROTOCOL="smtps";
-    public static final String USERNAME="algerpire0@gmail.com";
-    public static final String PASSWORD="ctfcdaflxbxwhkuk";
+    public static final String USERNAME="youremail";
+    public static final String PASSWORD="yourpassword";
     public static final String FROM_EMAIL="support@gmail.com";
     public static final String CC_EMAIL="";
     public static final String EMAIL_SUBJECT="Get Arrays LLC-New Password";
