@@ -8,6 +8,7 @@ import com.example.demo.exception.domain.EmailExistException;
 import com.example.demo.exception.domain.UserNotFoundException;
 import com.example.demo.exception.domain.UsernameExistException;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.EmailService;
 import com.example.demo.service.LoginAttemptService;
 import com.example.demo.service.UserService;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -25,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
+import javax.mail.MessagingException;
 import java.sql.Date;
 import java.util.EmptyStackException;
 import java.util.List;
@@ -40,12 +42,14 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
     private UserRepository userRepository;
     private BCryptPasswordEncoder passwordEncoder;
     private LoginAttemptService loginAttemptService;
+    private EmailService emailService;
 
     @Autowired
-    public UserServiceImplementation(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, LoginAttemptService loginAttemptService) {
+    public UserServiceImplementation(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, LoginAttemptService loginAttemptService, EmailService emailService) {
         this.userRepository = userRepository;
         this.passwordEncoder=passwordEncoder;
         this.loginAttemptService=loginAttemptService;
+        this.emailService=emailService;
     }
 
     @Override
@@ -84,7 +88,7 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
     //methods user service interface
 
     @Override
-    public User register(String firstName, String lastName, String username, String email) throws UserNotFoundException, EmailExistException, UsernameExistException {
+    public User register(String firstName, String lastName, String username, String email) throws UserNotFoundException, EmailExistException, UsernameExistException, MessagingException {
         validateNewUsernameAndEmail(StringUtils.EMPTY, username, email);
         User user=new User();
         user.setUserId(generateUserId());
@@ -102,7 +106,7 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         user.setRole(Role.ROLE_USER.name());
         user.setProfileImageUrl(getTemporaryProfileImageUrl());
         userRepository.save(user);
-        LOGGER.info("New user password "+password);
+        emailService.sendNewPasswordEmail(firstName,password,email);
         return user;
     }
 
